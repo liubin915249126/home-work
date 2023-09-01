@@ -1,0 +1,54 @@
+.wrap {
+}
+.wrap .content {
+  display: flex;
+}
+.wrap .content .left {
+  background: yellow;
+  height: calc(100vh - 200px);
+  flex: 1;
+  max-width: 20rem;
+}
+.wrap .content .right {
+  background: green;
+  height: calc(100vh - 200px);
+  flex: 4;
+  display: flex;
+  gap: 4px;
+}
+.wrap .content .right > div {
+  flex: 1;
+  background: #fff;
+}
+.wrap header {
+  height: 100px;
+  background: blue;
+  display: flex;
+  align-items: center;
+}
+.wrap header :global(.anticon-menu) {
+  display: none;
+}
+.wrap footer {
+  height: 100px;
+  background: red;
+}
+
+@media screen and (max-width: 760px) {
+  .wrap header :global(.anticon-menu) {
+    display: inline-block;
+    font-size: 60px;
+    margin-left: 20px;
+  }
+  .wrap .content .left {
+    display: none;
+  }
+  .wrap .content .right {
+    flex-direction: column;
+  }
+  .resDrawer {
+  }
+  .resDrawer :global(.ant-drawer-body) {
+    background: yellow;
+  }
+}
